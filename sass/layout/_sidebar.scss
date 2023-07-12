@@ -30,6 +30,9 @@
     color: abs.$text-gray;
     padding-left: 20px;
   }
+  &-icon {
+    flex: 0 0 24px;
+  }
   &-link {
     display: flex;
     align-items: center;
@@ -43,6 +46,16 @@
     &:hover {
       background: linear-gradient(142deg, #415ef4 0%, #7141ef 100%);
       color: abs.$text-white;
+      [fill^="#E5"] {
+        fill: abs.$gray-natural1;
+        opacity: 1;
+      }
+      [fill^="#A5"] {
+        fill: hsl(
+          var(--primary-h) calc(var(--primary-s) + 1%)
+            calc(var(--primary-l) + 16%)
+        );
+      }
     }
   }
 }

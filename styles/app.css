@@ -48,6 +48,12 @@ ol {
   list-style-type: none;
 }
 
+:root {
+  --primary-h: 248;
+  --primary-s: 57%;
+  --primary-l: 60%;
+}
+
 body {
   font-family: "IBM Plex Sans", sans-serif;
   color: hsl(220deg, 10%, 12%);
@@ -94,6 +100,9 @@ body {
   color: hsl(215deg, 19%, 59%);
   padding-left: 20px;
 }
+.menu-icon {
+  flex: 0 0 24px;
+}
 .menu-link {
   display: flex;
   align-items: center;
@@ -108,6 +117,13 @@ body {
 .menu-link:hover {
   background: linear-gradient(142deg, #415ef4 0%, #7141ef 100%);
   color: hsl(0deg, 0%, 100%);
+}
+.menu-link:hover [fill^="#E5"] {
+  fill: hsl(0deg, 0%, 97%);
+  opacity: 1;
+}
+.menu-link:hover [fill^="#A5"] {
+  fill: hsl(var(--primary-h), calc(var(--primary-s) + 1%), calc(var(--primary-l) + 16%));
 }
 
 /*# sourceMappingURL=app.css.map */

@@ -2,14 +2,13 @@ aside.sidebar
   a.logo(href="/")
     img(srcSet="./images/logo.png 2x" alt="gocastUI")
   ul.menu   
-    each item in [{text: "Home", icon: "./images/icons/icon-home.svg"}, {text: "Trending", icon: "./images/icons/icon-chart.svg"}, {text: "Explore Topics", icon: "./images/icons/icon-cube.svg"}, {text: "Playlist", icon: "./images/icons/icon-play.svg"}, {text: "Subscriptions", icon: "./images/icons/icon-subscriptions.svg"}]
+    each item in [{text: "Home", icon: "icon-home"}, {text: "Trending", icon: "icon-chart"}, {text: "Explore Topics", icon: "icon-cube"}, {text: "Playlist", icon: "icon-play"}, {text: "Subscriptions", icon: "icon-subscriptions"}]
       +menuItem(item.text, item.icon)
   ul.menu   
     h3.menu-heading Podcasters
-    each item in [{text: "Dashboard", icon: "./images/icons/icon-discovery.svg"}, {text: "Episodes", icon: "./images/icons/icon-microphone.svg"}, {text: "Team", icon: "./images/icons/icon-user.svg"}, {text: "Subscribers", icon: "./images/icons/icon-add_user.svg"}]
+    each item in [{text: "Dashboard", icon: "icon-discovery"}, {text: "Episodes", icon: "icon-microphone"}, {text: "Team", icon: "icon-user"}, {text: "Subscribers", icon: "icon-add_user"}]
       +menuItem(item.text, item.icon)
-
   ul.menu   
     h3.menu-heading Community
-    each item in [{text: "Leaderboard", icon: "./images/icons/icon-star.svg"}]
+    each item in [{text: "Leaderboard", icon: "icon-star"}]
       +menuItem(item.text, item.icon)
