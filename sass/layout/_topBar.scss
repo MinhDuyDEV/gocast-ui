@@ -1,0 +1,58 @@
+@use "../abstracts" as abs;
+
+.topBar {
+  padding: 24px 60px 24px 56px;
+  @include abs.bg(abs.$white);
+  @include abs.flexBox(center, space-between);
+  &-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    & > * {
+      flex-shrink: 0;
+    }
+  }
+  &-action {
+    padding: 12px;
+  }
+}
+
+.button {
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 15px;
+  line-height: 22px;
+  color: abs.$gray-natural1;
+  cursor: pointer;
+  @include abs.flexBox(center, null, 6px);
+  @include abs.fw("semibold");
+  @include abs.bg(abs.$primary-color);
+}
+
+.profile {
+  display: block;
+  @include abs.size(48px);
+  img {
+    border-radius: 100rem;
+    @include abs.cover;
+  }
+}
+
+.search {
+  padding: 12px 20px;
+  border-radius: 12px;
+  flex: 0 1 360px;
+  @include abs.flexBox(center, null, 12px);
+  @include abs.bg(abs.$gray-natural2);
+  &-input {
+    @include abs.bg(transparent);
+    border: none;
+    flex: 1;
+    font-size: 15px;
+    line-height: 22px;
+    color: abs.$primary-color;
+    caret-color: abs.$primary-color;
+    @include abs.fw("medium");
+    @include abs.placeholder(abs.$gray2);
+  }
+}

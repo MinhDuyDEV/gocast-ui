@@ -45,7 +45,7 @@
     border-radius: 12px;
     &:hover {
       background: linear-gradient(142deg, #415ef4 0%, #7141ef 100%);
-      color: abs.$text-white;
+      color: abs.$white;
       [fill^="#E5"] {
         fill: abs.$gray-natural1;
         opacity: 1;
